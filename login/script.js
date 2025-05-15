@@ -33,19 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (loginForm) {
         loginForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            
-            if (username === userData.username && password === userData.password) {
-                authentication
-                sessionStorage.setItem('isLoggedIn', 'true');
-                showDashboard();
-                showToast('Login successful!', 'success');
-            } else {
-                showToast('Invalid username or password. Try again.', 'error');
-            }
+            e.preventDefault()
+            window.location.href = '../analyze/index.html'
         });
     }
 
