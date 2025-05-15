@@ -27,30 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-
-    
-    const bookButtons = document.querySelectorAll('.book-btn');
-
-    bookButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const doctorName = this.closest('.doctor-info') ?
-                this.closest('.doctor-info').querySelector('h3').textContent :
-                'the selected doctor';
-
-            alert(`Thank you for choosing ${doctorName}. Our team will contact you shortly to schedule your appointment.`);
-
-        });
-    });
-
-    
-    const ctaButton = document.querySelector('.cta-btn');
-
-    if (ctaButton) {
-        ctaButton.addEventListener('click', function () {
-            alert('Our health advisors will help you find the right specialist. Please fill out the contact form or call us directly.');
-    
-        });
-    }
+   
 
     
     if (doctorCards.length) {
