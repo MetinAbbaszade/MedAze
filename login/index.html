@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAze Health & Wellness Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Login Form (shown if not authenticated) -->
+        <div class="auth-container" id="loginContainer">
+            <div class="auth-form">
+                <div class="logo">
+                    <h1>MedAze</h1>
+                </div>
+                <h2>Login to Your Account</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username"><i class="fas fa-user"></i> Email or Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Login</button>
+                    </div>
+                    <div class="form-links">
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        <a href="#" class="register-link">Don't have an account? Register here</a>
+                    </div>
+                </form>
+                <div class="security-info">
+                    <i class="fas fa-shield-alt"></i> Secure login | <i class="fas fa-lock"></i> Data encryption
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard (shown after authentication) -->
+        <div class="dashboard-container hidden" id="dashboardContainer">
+            <nav class="dashboard-nav">
+                <div class="logo">
+                    <h1>MedAze</h1>
+                </div>
+                <ul class="nav-tabs">
+                    <li class="active" data-tab="profile"><i class="fas fa-user"></i> Profile Info</li>
+                    <li data-tab="appointments"><i class="fas fa-calendar-check"></i> My Appointments</li>
+                    <li data-tab="notifications"><i class="fas fa-bell"></i> Notifications</li>
+                </ul>
+                <button id="logoutBtn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </nav>
+
+            <main class="dashboard-content">
+                <div class="welcome-banner">
+                    <h2>Hello, <span id="userNameDisplay">User</span>!</h2>
+                    <p class="last-login">Last login: <span id="lastLoginTime">Today at 10:30 AM</span></p>
+                </div>
+
+                <!-- Profile Info Tab -->
+                <section id="profileTab" class="dashboard-tab">
+                    <div class="section-header">
+                        <h3>Personal Information</h3>
+                        <p>Update your personal details below</p>
+                    </div>
+                    <div class="card">
+                        <form id="profileForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" name="fullName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateOfBirth">Date of Birth</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="section-header">
+                        <h3>Security</h3>
+                        <p>Update your password to keep your account secure</p>
+                    </div>
+                    <div class="card">
+                        <form id="passwordForm">
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" name="currentPassword">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" id="newPassword" name="newPassword">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">Update Password</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Appointments Tab -->
+                <section id="appointmentsTab" class="dashboard-tab hidden">
+                    <div class="section-header">
+                        <h3>Upcoming Appointments</h3>
+                        <button class="btn-secondary"><i class="fas fa-plus"></i> New Appointment</button>
+                    </div>
+                    <div class="appointments-list">
+                        <div class="appointment-card">
+                            <div class="appointment-status confirmed">Confirmed</div>
+                            <div class="appointment-details">
+                                <h4>General Checkup</h4>
+                                <p><i class="fas fa-calendar"></i> Monday, Aug 15, 2023</p>
+                                <p><i class="fas fa-clock"></i> 10:30 AM - 11:15 AM</p>
+                                <p><i class="fas fa-user-md"></i> Dr. Sarah Johnson</p>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn-outline"><i class="fas fa-eye"></i> Details</button>
+                                <button class="btn-outline"><i class="fas fa-calendar-alt"></i> Reschedule</button>
+                                <button class="btn-outline danger"><i class="fas fa-times"></i> Cancel</button>
+                            </div>
+                        </div>
+
+                        <div class="appointment-card">
+                            <div class="appointment-status pending">Pending</div>
+                            <div class="appointment-details">
+                                <h4>Dental Cleaning</h4>
+                                <p><i class="fas fa-calendar"></i> Thursday, Aug 25, 2023</p>
+                                <p><i class="fas fa-clock"></i> 2:00 PM - 3:00 PM</p>
+                                <p><i class="fas fa-user-md"></i> Dr. Michael Chen</p>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn-outline"><i class="fas fa-eye"></i> Details</button>
+                                <button class="btn-outline"><i class="fas fa-calendar-alt"></i> Reschedule</button>
+                                <button class="btn-outline danger"><i class="fas fa-times"></i> Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-header">
+                        <h3>Past Appointments</h3>
+                    </div>
+                    <div class="appointments-list">
+                        <div class="appointment-card past">
+                            <div class="appointment-status completed">Completed</div>
+                            <div class="appointment-details">
+                                <h4>Annual Physical</h4>
+                                <p><i class="fas fa-calendar"></i> June 10, 2023</p>
+                                <p><i class="fas fa-clock"></i> 9:00 AM - 10:00 AM</p>
+                                <p><i class="fas fa-user-md"></i> Dr. Robert Williams</p>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn-outline"><i class="fas fa-eye"></i> View Results</button>
+                                <button class="btn-outline"><i class="fas fa-file-medical"></i> Medical Records</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Notifications Tab -->
+                <section id="notificationsTab" class="dashboard-tab hidden">
+                    <div class="section-header">
+                        <h3>Notifications</h3>
+                        <div class="notification-settings">
+                            <button class="btn-text"><i class="fas fa-cog"></i> Settings</button>
+                            <button class="btn-text"><i class="fas fa-check-double"></i> Mark all as read</button>
+                        </div>
+                    </div>
+                    <div class="notifications-list">
+                        <div class="notification-card unread">
+                            <div class="notification-icon"><i class="fas fa-calendar-check"></i></div>
+                            <div class="notification-content">
+                                <h4>Appointment Confirmed</h4>
+                                <p>Your appointment with Dr. Sarah Johnson has been confirmed for August 15, 2023 at
+                                    10:30 AM.</p>
+                                <span class="notification-time">2 hours ago</span>
+                            </div>
+                            <button class="notification-action"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+
+                        <div class="notification-card">
+                            <div class="notification-icon"><i class="fas fa-bell"></i></div>
+                            <div class="notification-content">
+                                <h4>Appointment Reminder</h4>
+                                <p>Don't forget your dental cleaning with Dr. Chen tomorrow at 2:00 PM.</p>
+                                <span class="notification-time">1 day ago</span>
+                            </div>
+                            <button class="notification-action"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+
+                        <div class="notification-card">
+                            <div class="notification-icon"><i class="fas fa-file-medical"></i></div>
+                            <div class="notification-content">
+                                <h4>Test Results Available</h4>
+                                <p>Your recent lab results are now available. Please check your medical records.</p>
+                                <span class="notification-time">3 days ago</span>
+                            </div>
+                            <button class="notification-action"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-message">Changes saved successfully!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

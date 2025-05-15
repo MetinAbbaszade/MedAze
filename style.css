@@ -1,0 +1,240 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #1abc9c;
+    --text-color: #333;
+    --light-text: #777;
+    --background-color: #fff;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+    transform: translateX(-50%);
+}
+
+.subheadline {
+    font-size: 18px;
+    color: var(--light-text);
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    background: var(--background-color);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(46, 204, 113, 0.1);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.feature-card:nth-child(2n) .icon-container {
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.feature-card:hover .icon-container {
+    background: var(--secondary-color);
+}
+
+.feature-card:nth-child(2n):hover .icon-container {
+    background: var(--primary-color);
+}
+
+.icon-container i {
+    font-size: 28px;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.feature-card:nth-child(2n) .icon-container i {
+    color: var(--primary-color);
+}
+
+.feature-card:hover .icon-container i {
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+/* Testimonial */
+.testimonial {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.05) 0%, rgba(52, 152, 219, 0.05) 100%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 60px;
+    box-shadow: var(--card-shadow);
+}
+
+.rating {
+    margin-bottom: 20px;
+}
+
+.rating i {
+    color: #f1c40f;
+    font-size: 20px;
+    margin: 0 2px;
+}
+
+.testimonial p {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.patient-name {
+    font-weight: 500;
+    font-style: normal !important;
+    font-size: 16px !important;
+}
+
+.patient-count {
+    margin-top: 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* CTA Section */
+.cta-container {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.9) 0%, rgba(46, 204, 113, 0.9) 100%);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+}
+
+.cta-container h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.cta-button {
+    background-color: white;
+    color: var(--secondary-color);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-us {
+        padding: 60px 0;
+    }
+
+    .section-header h2 {
+        font-size: 30px;
+    }
+
+    .testimonial {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .cta-container {
+        padding: 30px 20px;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAze - Book an Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Book an Appointment</h1>
+            <p>Fill in the form below to schedule your visit with us. We'll get back to you shortly.</p>
+        </header>
+
+        <div class="form-card">
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label for="fullName">Ad, Soyad <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <div class="error-message" id="fullName-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Əlaqə nömrəsi <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Choose Service or Doctor</label>
+                    <select id="service" name="service">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="general-checkup">General Check-up</option>
+                        <option value="dentist">Dental Services</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Choose a date <span class="required">*</span></label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                        <div class="error-message" id="date-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentTime">Choose a time <span class="required">*</span></label>
+                        <input type="time" id="appointmentTime" name="appointmentTime" required>
+                        <div class="error-message" id="time-error"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Əlavə qeydlər</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Confirm Appointment</button>
+            </form>
+        </div>
+
+        <div id="success-message" class="success-message hidden">
+            <div class="success-content">
+                <div class="success-icon">✓</div>
+                <h2>Thank you!</h2>
+                <p>Your appointment has been received. We will contact you shortly.</p>
+                <button id="close-success" class="btn-close">Close</button>
+            </div>
+        </div>
+
+        <div id="loading-spinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

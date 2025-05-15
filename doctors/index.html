@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Doctors | MedAze Health & Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">MedAze</div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="active">Our Doctors</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1>Meet Our Medical Experts</h1>
+                <p class="subtitle">Qualified, experienced, and caring professionals ready to support your health
+                    journey.</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <label for="specialty-filter">Filter by specialty:</label>
+                    <select id="specialty-filter">
+                        <option value="all">All Specialties</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="psychiatry">Psychiatry</option>
+                        <option value="orthopedics">Orthopedics</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Grid Section -->
+        <section class="doctors-grid">
+            <div class="container">
+                <div class="doctors-container">
+                    <!-- Doctor Card 1 -->
+                    <div class="doctor-card" data-specialty="cardiology">
+                        <div class="doctor-photo">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Sarah Johnson">
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Sarah Johnson</h3>
+                            <p class="specialty">Cardiologist</p>
+                            <p class="experience">15+ years of experience</p>
+                            <p class="availability">Mon–Fri: 9am–5pm</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <button class="book-btn">Book Appointment</button>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 2 -->
+                    <div class="doctor-card" data-specialty="neurology">
+                        <div class="doctor-photo">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael Chen">
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Michael Chen</h3>
+                            <p class="specialty">Neurologist</p>
+                            <p class="experience">12 years of experience</p>
+                            <p class="availability">Tue–Sat: 8am–4pm</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <button class="book-btn">Book Appointment</button>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 3 -->
+                    <div class="doctor-card" data-specialty="dermatology">
+                        <div class="doctor-photo">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Emily Rodriguez">
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Emily Rodriguez</h3>
+                            <p class="specialty">Dermatologist</p>
+                            <p class="experience">8 years of experience</p>
+                            <p class="availability">Mon, Wed, Fri: 10am–6pm</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <button class="book-btn">Book Appointment</button>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 4 -->
+                    <div class="doctor-card" data-specialty="pediatrics">
+                        <div class="doctor-photo">
+                            <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="Dr. John Williams">
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. John Williams</h3>
+                            <p class="specialty">Pediatrician</p>
+                            <p class="experience">20+ years of experience</p>
+                            <p class="availability">Mon–Thu: 9am–6pm</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <button class="book-btn">Book Appointment</button>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 5 -->
+                    <div class="doctor-card" data-specialty="psychiatry">
+                        <div class="doctor-photo">
+                            <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Dr. Olivia Martinez">
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Olivia Martinez</h3>
+                            <p class="specialty">Psychiatrist</p>
+                            <p class="experience">10 years of experience</p>
+                            <p class="availability">Tue–Sat: 9am–5pm</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <button class="book-btn">Book Appointment</button>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 6 -->
+                    <div class="doctor-card" data-specialty="orthopedics">
+                        <div class="doctor-photo">
+                            <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Dr. Robert Singh">
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Robert Singh</h3>
+                            <p class="specialty">Orthopedic Surgeon</p>
+                            <p class="experience">18 years of experience</p>
+                            <p class="availability">Mon, Wed, Fri: 8am–3pm</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <button class="book-btn">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctor Spotlight Section -->
+        <section class="doctor-spotlight">
+            <div class="container">
+                <h2>Doctor of the Month</h2>
+                <div class="spotlight-content">
+                    <div class="spotlight-image">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Sarah Johnson">
+                    </div>
+                    <div class="spotlight-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p class="specialty">Cardiologist</p>
+                        <p class="bio">Dr. Johnson is a board-certified cardiologist with over 15 years of experience in
+                            treating complex cardiac conditions. She specializes in preventive cardiology and heart
+                            health management. Her patient-centered approach and commitment to education have earned her
+                            numerous accolades and a loyal patient following.</p>
+                        <div class="testimonials">
+                            <div class="testimonial">
+                                <p>"Dr. Johnson took the time to explain everything clearly. Her genuine care made all
+                                    the difference in my recovery journey."</p>
+                                <span>- Rebecca M.</span>
+                            </div>
+                        </div>
+                        <button class="book-btn">Book Appointment with Dr. Johnson</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <h2>Need help choosing the right doctor?</h2>
+                <p>We're here to assist you in finding the perfect specialist for your needs.</p>
+                <button class="cta-btn">Ask for a Recommendation</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MedAze</h2>
+                    <p>Your health, our priority</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Our Doctors</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>123 Health Avenue</li>
+                            <li>Wellness City, WC 10001</li>
+                            <li>info@medaze.com</li>
+                            <li>(555) 123-4567</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 MedAze Health & Wellness Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

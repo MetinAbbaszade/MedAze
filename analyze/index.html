@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAze - Your Test Results</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>MedAze</h2>
+            </div>
+            <div class="secure-note">
+                <i class="fas fa-lock"></i> Secure Access
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Test History</a></li>
+                    <li class="logout"><a href="../main/index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+            <div class="data-protection">
+                <i class="fas fa-shield-alt"></i>
+                <p>Your data is encrypted and securely stored.</p>
+            </div>
+        </aside>
+
+        
+        <main class="content">
+            
+            <div class="timeout-warning hidden">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Your session will expire in <span id="timeout-counter">5:00</span> minutes due to inactivity.</p>
+                <button id="stay-logged-in">Stay Logged In</button>
+            </div>
+
+            
+            <header class="header">
+                <div class="welcome-message">
+                    <h1>Welcome, <span id="user-name">Aysel</span>!</h1>
+                </div>
+            </header>
+
+            
+            <section class="results-section">
+                <div class="section-header">
+                    <h2>Your Test Results</h2>
+                    <div class="results-controls">
+                        <button id="toggle-sensitive" class="btn btn-outline">
+                            <i class="fas fa-eye"></i> Show Sensitive Data
+                        </button>
+                        <div class="filter-sort">
+                            <select id="filter-status">
+                                <option value="all">All Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                            <select id="sort-by">
+                                <option value="date-desc">Newest First</option>
+                                <option value="date-asc">Oldest First</option>
+                                <option value="name">Test Name</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="results-container">
+                    
+                    <div class="result-card completed">
+                        <div class="card-header">
+                            <h3>Blood Test - Complete Blood Count</h3>
+                            <span class="status completed">Completed</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="date"><i class="fas fa-calendar"></i> Date: April 15, 2023</p>
+                            <div class="sensitive-data hidden">
+                                <h4>Key Findings:</h4>
+                                <ul>
+                                    <li>Hemoglobin: 14.2 g/dL <span class="normal">(Normal Range: 12.0-15.5)</span></li>
+                                    <li>White Blood Cells: 7.5 K/uL <span class="normal">(Normal Range: 4.5-11.0)</span>
+                                    </li>
+                                    <li>Platelets: 250 K/uL <span class="normal">(Normal Range: 150-450)</span></li>
+                                </ul>
+                                <p class="result-summary normal">All values within normal range.</p>
+                            </div>
+                            <div class="placeholder-data">
+                                <p><i class="fas fa-lock"></i> Sensitive information hidden</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary"><i class="fas fa-file-pdf"></i> Download PDF</button>
+                            <button class="btn btn-secondary"><i class="fas fa-eye"></i> View Details</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="result-card pending">
+                        <div class="card-header">
+                            <h3>COVID-19 PCR Test</h3>
+                            <span class="status pending">Pending</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="date"><i class="fas fa-calendar"></i> Date: April 18, 2023</p>
+                            <p class="processing-note"><i class="fas fa-spinner fa-spin"></i> Your sample is being
+                                processed. Results typically take 24-48 hours.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-secondary disabled"><i class="fas fa-file-pdf"></i> Download
+                                PDF</button>
+                            <button class="btn btn-secondary"><i class="fas fa-bell"></i> Notify When Ready</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="result-card completed">
+                        <div class="card-header">
+                            <h3>Cholesterol Panel</h3>
+                            <span class="status completed">Completed</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="date"><i class="fas fa-calendar"></i> Date: March 30, 2023</p>
+                            <div class="sensitive-data hidden">
+                                <h4>Key Findings:</h4>
+                                <ul>
+                                    <li>Total Cholesterol: 210 mg/dL <span class="attention">(Borderline High:
+                                            >200)</span></li>
+                                    <li>HDL Cholesterol: 55 mg/dL <span class="normal">(Good: >40)</span></li>
+                                    <li>LDL Cholesterol: 130 mg/dL <span class="attention">(Borderline High:
+                                            >100)</span></li>
+                                </ul>
+                                <p class="result-summary attention">Some values require attention. Discuss with your
+                                    doctor.</p>
+                            </div>
+                            <div class="placeholder-data">
+                                <p><i class="fas fa-lock"></i> Sensitive information hidden</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary"><i class="fas fa-file-pdf"></i> Download PDF</button>
+                            <button class="btn btn-secondary"><i class="fas fa-eye"></i> View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
