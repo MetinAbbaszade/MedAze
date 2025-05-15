@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         email: "jane.smith@example.com",
         phone: "+1 (555) 123-4567",
         dateOfBirth: "1985-04-12",
-        lastLogin: "July 15, 2023 at 09:45 AM",
+        lastLogin: "July 15, 2025 at 09:45 AM",
         username: "user@example.com",
         password: "password123"
     };
