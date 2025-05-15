@@ -62,48 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    
-    const observerOptions = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    }, observerOptions);
-
-    
-    // const animateElements = document.querySelectorAll('.service-card, .feature, .testimonial');
-    // animateElements.forEach(el => {
-    //     el.style.opacity = '0';
-    //     el.style.transform = 'translateY(20px)';
-    //     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    //     observer.observe(el);
-    // });
-
-    
-    // document.addEventListener('scroll', function () {
-    //     animateElements.forEach(el => {
-    //         if (isInViewport(el) && !el.classList.contains('animate')) {
-    //             el.classList.add('animate');
-    //             el.style.opacity = '1';
-    //             el.style.transform = 'translateY(0)';
-    //         }
-    //     });
-    // });
-
-    
-    // function isInViewport(element) {
-    //     const rect = element.getBoundingClientRect();
-    //     return (
-    //         rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
-    //         rect.bottom >= 0
-    //     );
-    // }
 
     
     window.addEventListener('scroll', () => {

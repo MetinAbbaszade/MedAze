@@ -1,4 +1,4 @@
-/* Base styles and resets */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body {
     padding: 0 15px;
 }
 
-/* Typography */
+
 h1,
 h2,
 h3,
@@ -61,7 +61,7 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Button styles */
+
 button {
     cursor: pointer;
     font-family: 'Inter', sans-serif;
@@ -102,7 +102,7 @@ button {
     box-shadow: var(--shadow);
 }
 
-/* Header styles */
+
 .site-header {
     background-color: #fff;
     box-shadow: var(--shadow);
@@ -162,7 +162,7 @@ button {
     transition: var(--transition);
 }
 
-/* Hero section */
+
 .hero-section {
     background-color: var(--light-gray);
     padding: 60px 0;
@@ -181,7 +181,7 @@ button {
     margin: 0 auto 20px;
 }
 
-/* Filter section */
+
 .filter-section {
     padding: 30px 0;
     background-color: #fff;
@@ -207,7 +207,7 @@ button {
     min-width: 200px;
 }
 
-/* Doctors grid */
+
 .doctors-grid {
     padding: 40px 0 60px;
     background-color: #fff;
@@ -290,7 +290,7 @@ button {
     color: var(--primary-color);
 }
 
-/* Doctor spotlight section */
+
 .doctor-spotlight {
     background-color: var(--light-gray);
     padding: 60px 0;
@@ -352,7 +352,7 @@ button {
     margin-top: 10px;
 }
 
-/* CTA Banner */
+
 .cta-banner {
     padding: 60px 0;
     background: linear-gradient(to right, var(--accent-color), var(--primary-color));
@@ -372,7 +372,7 @@ button {
     opacity: 0.9;
 }
 
-/* Footer */
+
 .site-footer {
     background-color: #2c3e50;
     color: white;
@@ -432,7 +432,7 @@ button {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Responsive styles */
+
 @media (max-width: 1024px) {
     .doctors-container {
         grid-template-columns: repeat(2, 1fr);

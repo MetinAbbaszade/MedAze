@@ -2,50 +2,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
 
-    // Form validation elements
+    
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
 
-    // Error message elements
+    
     const nameError = document.getElementById('nameError');
     const emailError = document.getElementById('emailError');
     const messageError = document.getElementById('messageError');
 
-    // Form submission handler
+    
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Reset error states
+        
         resetErrors();
 
-        // Validate form
+        
         let isValid = validateForm();
 
         if (isValid) {
-            // In a real application, you would send the form data to the server here
-            // For this example, we'll just show the success message
 
-            // Hide the form and show success message
+            
             contactForm.style.display = 'none';
             successMessage.style.display = 'block';
 
-            // Optional: Reset the form (if you want to allow multiple submissions)
-            // contactForm.reset();
+            
 
-            // Optional: Scroll to the success message
+            
             successMessage.scrollIntoView({ behavior: 'smooth' });
-
-            // Optional: Reset the form and hide success message after a delay
-            // setTimeout(() => {
-            //     contactForm.style.display = 'block';
-            //     successMessage.style.display = 'none';
-            //     contactForm.reset();
-            // }, 5000);
+            
+            
+            
+            
+            
         }
     });
 
-    // Input validation on blur
+    
     nameInput.addEventListener('blur', function () {
         validateName();
     });
@@ -58,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validateMessage();
     });
 
-    // Validation functions
+    
     function validateForm() {
         let isNameValid = validateName();
         let isEmailValid = validateEmail();

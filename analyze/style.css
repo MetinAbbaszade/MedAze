@@ -33,7 +33,7 @@ body {
     min-height: 100vh;
 }
 
-/* Sidebar Styles */
+
 .sidebar {
     width: 260px;
     background: var(--bg-color);
@@ -122,14 +122,14 @@ body {
     font-size: 1rem;
 }
 
-/* Main Content Styles */
+
 .content {
     flex: 1;
     padding: 2rem;
     position: relative;
 }
 
-/* Timeout Warning */
+
 .timeout-warning {
     position: absolute;
     top: 1rem;
@@ -164,7 +164,7 @@ body {
     cursor: pointer;
 }
 
-/* Header Styles */
+
 .header {
     margin-bottom: 2rem;
 }
@@ -178,7 +178,7 @@ body {
     color: var(--primary-color);
 }
 
-/* Results Section */
+
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -252,7 +252,7 @@ body {
     cursor: not-allowed;
 }
 
-/* Results Cards */
+
 .results-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -391,7 +391,7 @@ body {
     border-top: 1px solid var(--border-color);
 }
 
-/* Toast Notifications */
+
 #toast-container {
     position: fixed;
     bottom: 20px;
@@ -427,7 +427,7 @@ body {
     margin-right: 10px;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -462,7 +462,7 @@ body {
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;

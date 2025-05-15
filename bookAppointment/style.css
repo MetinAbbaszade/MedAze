@@ -216,7 +216,7 @@ textarea {
     display: none;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
     .form-card {
         padding: 25px;
@@ -231,7 +231,7 @@ textarea {
     select,
     textarea {
         font-size: 16px;
-        /* Prevent zoom on focus in iOS */
+        
     }
 }
 

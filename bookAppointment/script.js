@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeSuccessBtn = document.getElementById('close-success');
     const loadingSpinner = document.getElementById('loading-spinner');
 
-    // Get today's date for min attribute of date input
+    
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('appointmentDate').min = today;
 
-    // Form validation
+    
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -17,16 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Close success message
+    
     closeSuccessBtn.addEventListener('click', function () {
         successMessage.classList.add('hidden');
     });
 
-    // Validate form inputs
+    
     function validateForm() {
         let isValid = true;
 
-        // Validate full name
+        
         const fullName = document.getElementById('fullName');
         const fullNameError = document.getElementById('fullName-error');
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             fullNameError.textContent = '';
         }
 
-        // Validate phone number
+        
         const phone = document.getElementById('phone');
         const phoneError = document.getElementById('phone-error');
         const phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             phoneError.textContent = '';
         }
 
-        // Validate email if provided
+        
         const email = document.getElementById('email');
         const emailError = document.getElementById('email-error');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
             emailError.textContent = '';
         }
 
-        // Validate date and time
+        
         const date = document.getElementById('appointmentDate');
         const time = document.getElementById('appointmentTime');
         const dateError = document.getElementById('date-error');
@@ -90,26 +90,26 @@ document.addEventListener('DOMContentLoaded', function () {
         return isValid;
     }
 
-    // Form submission with loading animation
+    
     function submitForm() {
-        // Show loading spinner
+        
         loadingSpinner.classList.remove('hidden');
 
-        // Simulate API call with timeout
+        
         setTimeout(function () {
-            // Hide loading spinner
+            
             loadingSpinner.classList.add('hidden');
 
-            // Show success message
+            
             successMessage.classList.remove('hidden');
 
-            // Reset form
+            
             form.reset();
 
-        }, 1500); // Simulating 1.5 seconds delay for API call
+        }, 1500); call
     }
 
-    // Add input event listeners for real-time validation
+    
     document.getElementById('fullName').addEventListener('input', function () {
         const fullNameError = document.getElementById('fullName-error');
         if (this.value.trim().length >= 3) {

@@ -68,7 +68,7 @@ body {
     padding: 0 20px;
 }
 
-/* Navbar */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -114,7 +114,7 @@ nav ul li a.active {
     cursor: pointer;
 }
 
-/* Page Header */
+
 .page-header {
     background: linear-gradient(to right, var(--primary-light), var(--secondary-light));
     padding: 80px 0;
@@ -134,7 +134,7 @@ nav ul li a.active {
     color: var(--text-light);
 }
 
-/* Services Grid */
+
 .services {
     padding: 80px 0;
 }
@@ -194,7 +194,7 @@ nav ul li a.active {
     color: var(--text-dark);
 }
 
-/* Buttons */
+
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -231,7 +231,7 @@ nav ul li a.active {
     font-size: 18px;
 }
 
-/* Pricing Table */
+
 .pricing {
     background-color: var(--white);
     padding: 80px 0;
@@ -277,7 +277,7 @@ nav ul li a.active {
     background-color: var(--secondary-light);
 }
 
-/* Doctors Section */
+
 .doctors-preview {
     padding: 80px 0;
 }
@@ -334,7 +334,7 @@ nav ul li a.active {
     margin-top: 30px;
 }
 
-/* CTA Banner */
+
 .cta-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200');
     background-size: cover;
@@ -355,7 +355,7 @@ nav ul li a.active {
     font-size: 18px;
 }
 
-/* Footer */
+
 footer {
     background-color: var(--text-dark);
     color: white;
@@ -409,7 +409,7 @@ footer {
     color: #aaa;
 }
 
-/* Responsive Design */
+
 @media (max-width: 992px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Mobile menu toggle
+    
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('nav ul');
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Smooth scroll for anchor links
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
 
-            // Close mobile menu if open
+            
             if (navList.classList.contains('active')) {
                 navList.classList.remove('active');
             }
         });
     });
 
-    // Add scroll animation for elements
+    
     const animateOnScroll = function () {
         const elements = document.querySelectorAll('.service-card, .pricing-table, .doctor-card');
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
-    // Add animation class to CSS
+    
     const style = document.createElement('style');
     style.innerHTML = `
         .service-card, .pricing-table, .doctor-card {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
     document.head.appendChild(style);
 
-    // Run animation check on scroll and on load
+    
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Run once at load
+    animateOnScroll(); 
 });
